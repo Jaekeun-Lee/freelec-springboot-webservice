@@ -24,6 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'junit:junit:4.12'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
     runtime 'com.h2database:h2:1.4.199'
     compileOnly 'org.projectlombok:lombok'

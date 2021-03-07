@@ -1,0 +1,38 @@
+{{>layout/header}}
+<div class="container">
+
+    <div class="row">
+        <h4>Jack & 스프링 부트로 시작하는 웹서비스</h4>
+    </div>
+
+    <div class="col-md-12">
+        <div class="row">
+            <a href="/posts/save" role="button" class="btn btn-outline-primary">새 글 등록</a>
+        </div>
+
+        <div class="row">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">게시글 번호</th>
+                    <th scope="col">게시물 제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">최종 수정일</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#posts}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td> <a href="/posts/update/{{id}}">{{title}}</a> </td>
+                        <td>{{author}}</td>
+                        <td>{{modifiedDate}}</td>
+                    </tr>
+                {{/posts}}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+{{>layout/footer}}
