@@ -3,6 +3,7 @@
 /build/
 /.idea/
 /.out/
+application-oauth.yml
 *.log
 *.bak
 *.iml
