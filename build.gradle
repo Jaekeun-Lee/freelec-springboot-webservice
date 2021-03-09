@@ -25,6 +25,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
     implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.session:spring-session-jdbc'
     implementation 'junit:junit:4.12'
 
     runtime 'com.h2database:h2:1.4.199'
