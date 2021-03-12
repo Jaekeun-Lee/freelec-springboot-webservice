@@ -1,9 +1,13 @@
 package com.jacklee.webservice.web;
 
+import com.jacklee.webservice.config.auth.SecurityConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -11,7 +15,10 @@ import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest
+@WebMvcTest(controllers = HelloController.class,
+            excludeFilters = {
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,classes = SecurityConfig.class)
+            })
 @RunWith(SpringRunner.class)
 class HelloControllerTest {
 
@@ -19,6 +26,7 @@ class HelloControllerTest {
     private MockMvc mvc;
 
     @Test
+    @WithMockUser(roles = "USER")
     void hello() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
@@ -27,6 +35,7 @@ class HelloControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "USER")
     public void helloResponseDto() throws Exception {
         String name = "hello";
         int amount = 1000;

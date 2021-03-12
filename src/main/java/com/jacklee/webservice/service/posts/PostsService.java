@@ -2,7 +2,7 @@ package com.jacklee.webservice.service.posts;
 
 import com.jacklee.webservice.domain.posts.Posts;
 import com.jacklee.webservice.domain.posts.PostsRepository;
-import com.jacklee.webservice.web.dto.PostSaveRequestDto;
+import com.jacklee.webservice.web.dto.PostsSaveRequestDto;
 import com.jacklee.webservice.web.dto.PostsListResponseDto;
 import com.jacklee.webservice.web.dto.PostsResponseDto;
 import com.jacklee.webservice.web.dto.PostsUpdateRequestDto;
@@ -20,7 +20,7 @@ public class PostsService {
     private final PostsRepository postsRepository;
 
     @Transactional
-    public Long save(PostSaveRequestDto requestDto) {
+    public Long save(PostsSaveRequestDto requestDto) {
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 

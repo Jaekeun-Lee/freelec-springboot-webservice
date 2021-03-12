@@ -1,7 +1,7 @@
 package com.jacklee.webservice.web;
 
 import com.jacklee.webservice.service.posts.PostsService;
-import com.jacklee.webservice.web.dto.PostSaveRequestDto;
+import com.jacklee.webservice.web.dto.PostsSaveRequestDto;
 import com.jacklee.webservice.web.dto.PostsResponseDto;
 import com.jacklee.webservice.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ public class PostsApiController {
     private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")
-    public Long save(@RequestBody PostSaveRequestDto requestDto) {
+    public Long save(@RequestBody PostsSaveRequestDto requestDto) {
         return postsService.save(requestDto);
     }
 
