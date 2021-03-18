@@ -27,6 +27,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.springframework.session:spring-session-jdbc'
     implementation 'junit:junit:4.12'
+    implementation 'org.mariadb.jdbc:mariadb-java-client'
 
     runtime 'com.h2database:h2:1.4.199'
     compileOnly 'org.projectlombok:lombok'

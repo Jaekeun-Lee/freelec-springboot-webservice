@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    include: oauth, realdb
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+
+  session:
+    store-type: jdbc
