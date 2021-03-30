@@ -6,6 +6,9 @@ branches:
   only:
     - master
 
+before_install:
+  - chmod +x gradlew
+
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -13,7 +16,6 @@ cache:
     - '$HOME/.gradle'
 
 script: "./gradlew clean build"
-
 
 before_deploy:
   - zip -r jacklee-springboot-webservice *
@@ -30,7 +32,6 @@ deploy:
   acl: private
   local_dir: deploy
   wait-until-deployed: true
-
 
 # CI 실행 완료 시 메일로 알람
 notifications:
