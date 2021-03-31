@@ -18,15 +18,15 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r jacklee-springboot-webservice *
+  - zip -r freelec-springboot-webservice *
   - mkdir -p deploy
-  - mv jacklee-springboot-webservice.zip deploy/jacklee-springboot-webservice.zip
+  - mv freelec-springboot-webservice.zip deploy/freelec-springboot-webservice.zip
 
 deploy:
   provider: s3
   access_key_id: AKIAYUN6DKS2YJYN36ZR
   secret_access_key: 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
-  bucket: jacklee-springboot-build
+  bucket: freelec-springboot-build
   region: ap-northeast-2
   skip_cleanup: true
   acl: private
