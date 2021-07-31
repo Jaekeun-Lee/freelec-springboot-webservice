@@ -1,34 +1,38 @@
 # 📚스프링 부트와 AWS로 구현하는 웹 서비스
 
-
-- Springboot 2.4.3
-- Gradle 6.7.0
-- JUnit5
-- Github
-- H2
-- lombok
-- JPA
-- OAuth2.0
-- Mustache
-- Bootstrap
-- AWS EC2 (Amazon Linux AMI 2)
-- AWS RDS (MariaDB 10.2.21)
-- AWS S3
-- Putty
-- HeidiSQL
-- Travis CI
-- Nginx
-- IntelliJ
-
-　
-
-
 ### 목표 :seedling:
 
-`EC2` `RDS` `Travis CI` `AWS` `CodeDeploy` `JPA`
-활용하여 배포 자동화, 무중단 배포 프로젝트 경험을 위한 RESTful API 기반 Web Application
+배포 자동화, 무중단 배포 프로젝트 경험을 위한 RESTful API 기반 Web Application
 
 　
+ 
+
+## 개발환경 :bookmark:
+
+
+- **Springboot 2.4.3**
+- **Gradle 6.7.0**
+- **JUnit5**
+- **Github**
+- **H2**
+- **lombok**
+- **JPA**
+- **OAuth2.0**
+- **Mustache**
+- **Bootstrap**
+- **AWS EC2 (Amazon Linux AMI 2)**
+- **AWS RDS (MariaDB 10.2.21)**
+- **AWS S3**
+- **Putty**
+- **Travis CI**
+- **Nginx**
+- **IntelliJ**
+
+
+
+　
+ 
+ 
 
 ### 키워드 :bookmark:
 
